@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-
+import List from "./components/list";
+import Head from "./components/head";
 function App() {
+  const heading =["Mobile Operating System","Mobile Manufacturers"];
+  const items1=["Android","Blackberry","IPhone","windows Phone"];
+  const items2=["Samsung","HTC","Apple","Micromax"]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <Head head={heading[0]} />
+    <ul>
+    { items1.map((e)=>(<List item={e}/>))}
+    </ul>
+
+    <Head head={heading[1]} />
+    <ul>
+    { items2.map((e)=>(<List item={e}/>))}
+    </ul>
+
     </div>
   );
 }
