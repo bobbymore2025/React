@@ -1,0 +1,12 @@
+
+   { 
+       "Users":[{
+        "name": "Bobby",
+        "age":"25",
+        "address": "Pune",
+        "department":"IT",
+        "salary":"60000",
+        "marital_Status": "Unmarried"
+       }]
+
+   }

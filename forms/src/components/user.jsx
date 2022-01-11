@@ -1,6 +1,6 @@
 import React from  "react"
-
-const User=()=>{
+import Forminput from "./comonents/forminput"
+const Form=()=>{
    
     const initState = {
   name: "",
@@ -11,6 +11,10 @@ const User=()=>{
   marital_Status: "",
  
 }
+const handleSubmit=()=>{
+   
+
+}
 
 
   const [state, setState] = React.useState(initState)
@@ -18,22 +22,8 @@ const User=()=>{
     const {name, value} = e.target
     setState( { ...state, [name]: value} )
   }
-  return (
-    <div>
-        <div>
-          <input type="text" name="name" placeholder="name" value={state.name} onChange={handleChange} />
-        </div>
-        <div>
-          <input type="text" name="address" placeholder="address" value={state.address} onChange={handleChange} />
-        </div>
-        <div>
-          <input type="text" name="email" placeholder="email" value={state.email} onChange={handleChange} />
-        </div>
-        <div>
-          <input type="password" name="password" placeholder="password" value={state.password} onChange={handleChange} />
-        </div>
-    </div>
-  )
-
-}</>
+  console.log(state);
+  return
+  <Forminput onSubmit={handleSubmit} onChange={handleChange} />
 }
+export default Form;
