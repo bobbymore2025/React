@@ -1,5 +1,5 @@
 
-const Forminput =({handleSubmit,handleChange} )=>{
+const Forminput =({handleSubmit,handleChange,maratial_Status} )=>{
     return (
     <form onSubmit={handleSubmit}>
         <div>
@@ -15,17 +15,17 @@ const Forminput =({handleSubmit,handleChange} )=>{
           <input type="text" name="sallary" placeholder="sallary" value={state.email} onChange={handleChange} />
         </div>
         <div>
-        <select className="form-select mb-3" name="department"  onChange={handleChange}>
+        <select  name="department"  onChange={handleChange}>
                                     <option value="">Select Department</option>
-                                    <option value="Marketing">Full Stack</option>
-                                    <option value="Marketing">Frontend</option>
-                                    <option value="Developer">Backend</option>
+                                    <option value="fullStack">Full Stack</option>
+                                    <option value="frontend">Frontend</option>
+                                    <option value="backend">Backend</option>
                                     <option value="Sales">Sales</option>
                                     <option value="DevOps">DevOps</option>
                                 </select>
         </div>
         <div>
-        <input checked={isMarried} name="isMarried"  type="checkbox"  onChange={handleChange} />
+        <input checked={maratial_Status} name="maratial_Status"  type="checkbox"  onChange={handleChange} />
         </div>
         
     </form>
