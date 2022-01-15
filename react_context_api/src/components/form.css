@@ -1,0 +1,9 @@
+img {
+    max-width: 300px;
+    align-self: center;
+}
+.nav{
+    display:inline-block;
+    justify-content: space-between;
+    
+}
