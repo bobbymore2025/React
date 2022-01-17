@@ -1,12 +1,11 @@
 
    { 
-       "Users":[{
-        "name": "Bobby",
-        "age":"25",
-        "address": "Pune",
-        "department":"IT",
-        "salary":"60000",
-        "marital_Status": "Unmarried"
-       }]
+       "products":[
+           {"id":1,
+             "name":"shoes",
+             "price":"1500",
+             "discription":"sport shoes"
+            }
+       ]
 
    }
