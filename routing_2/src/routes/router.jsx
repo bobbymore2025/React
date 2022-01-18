@@ -16,7 +16,7 @@ export const Router = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-                <Route path='/settings' element={<PrivateRoute><Settings /></PrivateRoute>} />
+                <Route path='/dashboard/settings' element={<PrivateRoute><Settings /></PrivateRoute>} />
             </Routes>
         </>
     );

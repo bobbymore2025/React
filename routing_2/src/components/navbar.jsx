@@ -13,7 +13,7 @@ export const Navbar = () => {
                 <div className="align">
                     <Link to={'/'}><button>Home</button></Link>
                     <Link to={'/dashboard'}><button>Dashboard</button></Link>
-                    <Link to={'/settings'}><button >Settings</button></Link>
+                    <Link to={'/dashboard/settings'}><button >Settings</button></Link>
                     <Link to={'/login'}>
                         <button
                             onClick={token ? () => { handleToken("") } : undefined}
