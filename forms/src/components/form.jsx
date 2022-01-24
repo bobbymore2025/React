@@ -1,7 +1,7 @@
 import React from  "react"
-import Forminput from "./components/forminput"
+import {Forminput} from "./forminput"
 import {useEffect,useState} from "react"
-import Table from "./components/table" 
+import {Table} from "./table" 
 const Form=()=>{
    
     const initState = {
@@ -29,7 +29,7 @@ const getData = (page) => {
 
   setIsLoading(true)
 
-  fetch(`http://localhost:3004/user?_page=${page}&_limit=5`)
+  fetch(`http://localhost:3004/users?_page=${page}&_limit=5`)
       .then((res) => {
           console.log(res.headers["X-total-count"]);
           return res.json()
@@ -50,7 +50,7 @@ const getData = (page) => {
 
 const postData = (data) => {
 
-  fetch(`http://localhost:3004/user`, {
+  fetch(`http://localhost:3004/users`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -68,7 +68,7 @@ const postData = (data) => {
 }
 const deleteData = (id) => {
 
-  fetch(`http://localhost:3004/user/${id}`, {
+  fetch(`http://localhost:3004/users/${id}`, {
       method: "DELETE",
       headers: {
           "Content-Type": "application/json"
@@ -86,7 +86,7 @@ const sortLH = () => {
 
   setIsLoading(true)
 
-  fetch(`http://localhost:3004/user?_sort=salary&_order=asc&_page=${page}&_limit=5`)
+  fetch(`http://localhost:3004/users?_sort=salary&_order=asc&_page=${page}&_limit=5`)
       .then((res) => res.json())
       .then((res) => {
           // res.sort((a, b) => a.salary - b.salary)
@@ -105,7 +105,7 @@ const sortHL = () => {
 
   setIsLoading(true)
 
-  fetch(`http://localhost:3004/user?_sort=salary&_order=desc&_page=${page}&_limit=5`)
+  fetch(`http://localhost:3004/users?_sort=salary&_order=desc&_page=${page}&_limit=5`)
       .then((res) => res.json())
       .then((res) => {
           // res.sort((a, b) => b.salary - a.salary)
@@ -124,7 +124,7 @@ const filterDepartment = (depart) => {
   console.log("working");
   setIsLoading(true)
 
-  fetch(`http://localhost:3004/user?department=${depart}&_page=${page}&_limit=5`)
+  fetch(`http://localhost:3004/users?department=${depart}&_page=${page}&_limit=5`)
       .then((res) => res.json())
       .then((res) => {
           // res = res.filter((element) => element.department === depart)
@@ -154,8 +154,9 @@ const handleSubmit = (e) => {
 
   
   return(
-    <>
-  <Forminput onSubmit={handleSubmit} onChange={handleChange} />
+    <> <div style={{disply:"flex",flexDirection:"column" ,}}>
+   <Forminput onSubmit={handleSubmit} onChange={handleChange} />
+   </div>
 
   < Table form={form} deleteData={deleteData} sortLH={sortLH} sortHL={sortHL} filterDepartment={filterDepartment} />
    

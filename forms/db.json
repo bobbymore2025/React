@@ -1,4 +1,25 @@
 {
-  "users": []
-   
+  "users": [
+    {
+      "name": "bobby",
+      "age": "24",
+      "salary": "60000",
+      "department": "fullStack",
+      "maratial_status": "false"
+    },
+    {
+      "name": "ajit",
+      "age": "24",
+      "salary": "50000",
+      "department": "frontend",
+      "maratial_status": "false"
+    },
+    {
+      "name": "abhishek",
+      "age": "24",
+      "salary": "40000",
+      "department": "backend",
+      "maratial_status": "true"
+    }
+  ]
 }

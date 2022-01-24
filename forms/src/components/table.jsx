@@ -11,7 +11,7 @@ const TableBody = ({ item, deleteData }) => {
        id,
       }=item
     return (
-        <tr>
+        <tr style={{marginLeft:"300px"}}>
             <td>{name}</td>
             <td>{age}</td>
             <td>{address}</td>

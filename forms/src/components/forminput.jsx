@@ -1,18 +1,18 @@
 
-const Forminput =({handleSubmit,handleChange,maratial_Status} )=>{
+export const Forminput =({handleSubmit,handleChange,maratial_Status} )=>{
     return (
     <form onSubmit={handleSubmit}>
         <div>
-          <input type="text" name="name" placeholder="name" value={state.name} onChange={handleChange} />
+          <input type="text" name="name" placeholder="name"onChange={handleChange} />
         </div>
         <div>
-          <input type="text" name="age" placeholder="age" value={state.name} onChange={handleChange} />
+          <input type="text" name="age" placeholder="age" onChange={handleChange} />
         </div>
         <div>
-          <input type="text" name="address" placeholder="address" value={state.address} onChange={handleChange} />
+          <input type="text" name="address" placeholder="address" onChange={handleChange} />
         </div>
         <div>
-          <input type="text" name="sallary" placeholder="sallary" value={state.email} onChange={handleChange} />
+          <input type="text" name="sallary" placeholder="sallary"  onChange={handleChange} />
         </div>
         <div>
         <select  name="department"  onChange={handleChange}>
@@ -27,8 +27,7 @@ const Forminput =({handleSubmit,handleChange,maratial_Status} )=>{
         <div>
         <input checked={maratial_Status} name="maratial_Status"  type="checkbox"  onChange={handleChange} />
         </div>
-        
+        <div><input type="submit" placeholder="submit" /></div>
     </form>
   )
 }
-export default Forminput;
