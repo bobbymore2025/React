@@ -8,7 +8,7 @@ export const Products =()=>{
     },[])
 
     const getProduct = ()=>{
-        fetch("http://localhost:3005/products")
+        fetch("http://localhost:3001/products")
         .then(d=>d.json())
         .then((res)=>{setProduct(res)});
     }
