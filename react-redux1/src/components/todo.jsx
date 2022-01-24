@@ -1,14 +1,15 @@
 import React, { useState, useContext } from "react";
 import { addTodo, deleteTodo } from "../store/action";
-import {useDispatch} from "react-redux"
+import {useDispatch,} from "react-redux"
+import {getState} from "../store/store"
 import { nanoid } from "nanoid";
 
 
 const Todo = () => {
   const [text, setText] = useState("");
-   
+   const dispatch=useDispatch();
     const [state, setstate] = useState(0)
-    const {todo} = getState();
+   const {todo} = getState();
 
     const handleAddtoTodo = () => {
        const payload = {
